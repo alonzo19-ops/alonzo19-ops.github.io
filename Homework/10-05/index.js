@@ -1,4 +1,4 @@
-/* https://creativemarket.com/taraskot */
+
 
 //Define some test data
 var WeedData = [
