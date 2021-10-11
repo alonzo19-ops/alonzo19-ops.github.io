@@ -68,7 +68,7 @@ $(document).ready(function () {
       body.toggleClass("dark-mode");
       if (body.hasClass("dark-mode")) {
           ZODIAC_CLASSLIST.forEach(a => {
-              $(a).css("color", "#008000");
+              $(a).css("color", "#f080800");
               outputSign1.css("color", "inherit");
               ampersand.css("color", "inherit");
               outputSign2.css("color", "inherit");
@@ -202,12 +202,12 @@ $(document).ready(function () {
           case z[2]:
           case z[6]:
           case z[10]:
-              outputSign1.css("color", "#008000");
+              outputSign1.css("color", "##ff69b4");
               break;
           case z[1]:
           case z[5]:
           case z[9]:
-              outputSign1.css("color", "#993333");
+              outputSign1.css("color", "#ff6347");
               break;
           default:
               alert("error");
