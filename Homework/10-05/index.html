@@ -1,55 +1,86 @@
 
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset = "utf-8" />
-      <title> My JavaScript Test Page</title>
-       <ul>
-      <link rel = "icon" href ="/homework/10-05/" />
-      <link rel="/homework/10-05/index.js/map.css"/>
-         </head>
-         <h1 style="text-align:center"> Weed 101 Measurements & Strains</h1>
-         <body>
-            <div class="background">
-               <div class="container">
-                 <div class="panel pricing-table">
-                   
-                   <div class="pricing-plan">
-                     <img src="https://image.shutterstock.com/image-vector/cannabis-indica-calligraphic-hand-drawn-600w-634229426.jpg" alt="" class="pricing-img">
-                     <h2 class="pricing-header">Sativa</h2>
-                     <ul class="pricing-features">
-                       <li class="pricing-features-item">Custom domains</li>
-                       <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
-                     </ul>
-                     <span class="pricing-price">Indica</span>
-                     <a href="#/" class="pricing-button">Sign up</a>
-                   </div>
-                   
-                   <div class="pricing-plan">
-                     <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
-                     <h2 class="pricing-header">Hybrid</h2>
-                     <ul class="pricing-features">
-                       <li class="pricing-features-item">Never sleeps</li>
-                       <li class="pricing-features-item">Multiple workers for more powerful apps</li>
-                     </ul>
-                     <span class="pricing-price">$150</span>
-                     <a href="#/" class="pricing-button is-featured">Free trial</a>
-                   </div>
-                   
-                   <div class="pricing-plan">
-                     <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
-                     <h2 class="pricing-header">Hybrid</h2>
-                     <ul class="pricing-features">
-                       <li class="pricing-features-item">Dedicated</li>
-                       <li class="pricing-features-item">Simple horizontal scalability</li>
-                     </ul>
-                     <span class="pricing-price">$400</span>
-                     <a href="#/" class="pricing-button">Free trial</a>
-                   </div>
-                   
-                 </div>
-               </div>
-             </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Three Card Tarot Reading</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
 
-             </body>
+    <meta charset="UTF-8">
+    <title>Past, Present, Future Three Card Tarot Draw</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS for this webapp-->
+    <script src="js/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+
+    <!--lodash-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js.map"></script>
+</head>
+<body onload="autoCode()">
+
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Three Card Tarot Reading</h1>
+            <br>
+            <p id="blurb">
+                The three card reading is one of the simplest tarot card spreads.<br /> The card to the left represents events in your past that may have led to the position you are in now. The Tarot card in the center position represents your outlook on your
+                current state of affairs. The card furthest to the right suggests a possible outcome if no action is taken to change the current course. The future is not set in stone &amp; can be changed through action.
+                <br />
+                <br /> Please focus on your question &amp; click the &quot;My Reading&quot; button below when you are ready.
+            </p>
+            
+              <button type="button" class="btn btn-primary btn-lg" id="pastPresentFuture" onclick="pastPresentFuture()">My Reading</button>
+          <h4>Percentage of Reversals</h4>
+          <input type="range" min="0" max="50" value="0" onchange="showValue(this.value)" />
+<span id="range">0</span>%
+          
+            <!--<button onclick="scraper()">TEST</button>-->
+            <div id="table" class="container-flex">
+                <tr>
+                    <th class="col-sm-4">
+                        <center>
+                            <h2>Past</h2>
+                        </center>
+                    </th>
+                    <th class="col-sm-4">
+                        <center>
+                            <h2>Present</h2>
+                        </center>
+                    </th>
+                    <th class="col-sm-4">
+                        <center>
+                            <h2>Future</h2>
+                        </center>
+                    </th>
+                </tr>
+                <tr id="card-img">
+                    <td class="col-md-4" id="td-1"></td>
+                    <td class="col-md-4" id="td-2"></td>
+                    <td class="col-md-4" id="td-3"></td>
+                </tr>
+                <tr id="display-name">
+                    <td class="col-sm-4" id="td-display-name-1"></td>
+                    <td class="col-sm-4" id="td-display-name-2"></td>
+                    <td class="col-sm-4" id="td-display-name-3"></td>
+                </tr>
+                <tr id="reversal">
+                    <td class="col-sm-4" id="rev-1"></td>
+                    <td class="col-sm-4" id="rev-2"></td>
+                    <td class="col-sm-4" id="rev-3"></td>
+                </tr>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
