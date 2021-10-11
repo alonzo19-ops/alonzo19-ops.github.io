@@ -4,10 +4,6 @@
         }console.log('Weed Measurement Guide');
 
 
- document.
-      getElementById
-      ("conf")
-      .innerHTML = txt;
 }
 
 //Prints: Weed Measurement Guide
