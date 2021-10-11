@@ -55,14 +55,92 @@
     <div class="container features">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <h3 class="feature-title">Bubbles</h3>
-                <img src="images/dial.jpg" alt="zodiac wheel on wall, Italy" class="img-fluid">
-                <span>
-                    Photo by <a href="https://unsplash.com/@jonathan_francisca?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonathan Francisca</a> on <a href="https://unsplash.com/s/photos/astrology?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
-                </span>
+                <h3 class="feature-title">Zodiac Sign</h3>
+                <img src="https://images.squarespace-cdn.com/content/v1/58c6da2fe3df28a158c2ce29/1531161354350-MRI7UI7CL8KJV3DX6R1C/Cannabis+Strains+of+the+Times+for+Each+of+the+Zodiac+Signs?format=1500w" alt="zodiac wheel on wall, Italy" class="img-fluid">
+                
+               
                 <p>What is your Zodiac Sign?</p>
             </div>
-         
+            public class Example {
+               public static void main (String[] args) {
+                  int day = 7;
+                  String month = "August";
+                  String sign="";
+                  if (month == "January") {
+                     if (day < 20)
+                        sign = "Capricorn";
+                     else
+                        sign = "Aquarius";
+                  }
+                  else if (month == "February") {
+                     if (day < 19)
+                        sign = "Aquarius";
+                     else
+                        sign = "Pisces";
+                  }
+                  else if(month == "March") {
+                     if (day < 21)
+                        sign = "Pisces";
+                     else
+                        sign = "Aries";
+                  }
+                  else if (month == "April") {
+                     if (day < 20)
+                        sign = "Aries";
+                     else
+                        sign = "Taurus";
+                  }
+                  else if (month == "May") {
+                     if (day < 21)
+                        sign = "Taurus";
+                     else
+                        sign = "Gemini";
+                  }
+                  else if( month == "June") {
+                     if (day < 21)
+                        sign = "Gemini";
+                     else
+                        sign = "Cancer";
+                  }
+                  else if (month == "July") {
+                     if (day < 23)
+                        sign = "Cancer";
+                     else
+                        sign = "Leo";
+                  }
+                  else if( month == "August") {
+                     if (day < 23)
+                        sign = "Leo";
+                     else
+                        sign = "Virgo";
+                  }
+                  else if (month == "September") {
+                     if (day < 23)
+                        sign = "Virgo";
+                     else
+                        sign = "Libra";
+                  }
+                  else if (month == "October") {
+                     if (day < 23)
+                        sign = "Libra";
+                     else
+                        sign = "Scorpio";
+                  }
+                  else if (month == "November") {
+                     if (day < 22)
+                        sign = "scorpio";
+                     else
+                        sign = "Sagittarius";
+                  }
+                  else if (month == "December") {
+                     if (day < 22)
+                        sign = "Sagittarius";
+                     else
+                        sign ="Capricorn";
+                  }
+                  System.out.println("The astrological sign for " + day + " " + month + " is " + sign );
+               }
+            }
             
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <p>Set up an online one on one session!</p>
