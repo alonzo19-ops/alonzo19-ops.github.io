@@ -3,8 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <script src="https://d3js.org/d3.v4.min.js"></script>
-  </head>
+  <style>
+      .funkyText {
+          font-Family: "Comic Sans MS";
+          font-size: 36px;
+          font-style: italic;
+          font-weight: bold;
+      }
+  </style></head>
   <body>
+ <h1 id="title"> My Cool Title</h1>
 
+ <script>
+
+     var title = d3.select("#title");
+     title.style("color", "red");
+     title.attr("class", "funkyText");
+ </script>
   </body>
+
+
 </html>
