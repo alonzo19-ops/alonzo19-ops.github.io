@@ -14,13 +14,37 @@
   <body>
  <h1 id="title"> My Cool Title</h1>
 
+ <svg>
+     Three little circles
+     <circle class="redCicles" cx="50" cy="100" r="25" />
+     <circle class="redCicles" cx="100" cy="100" r="25" />
+     <circle class="redCicles" cx="150" cy="100" r="25" />
+ </svg>
+
  <script>
 
      var title = d3.select("#title");
-     title.style("color", "red");
-     title.attr("class", "funkyText");
+     title
+     .style("color", "red")
+     .attr("class", "funkyText");
+
+     var myCircles = d3.selectAll(".redCircles")
+        .attr("fill", "red");
+
+     function circlePosition() {
+         return Math.random() * 150 + 50;
+     }
+        function shakeCircles() {
+        myCircles
+        .attr("r", function() { 
+            return Math.random() * 50;
+    })
+    .attr("cx", circlePosition);
+    }
+    shakeCircles();
  </script>
   </body>
+   
 
 
 </html>
