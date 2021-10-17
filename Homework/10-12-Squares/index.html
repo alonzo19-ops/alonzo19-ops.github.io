@@ -14,12 +14,12 @@
   <body>
  <h1 id="title"> My Cool Squares</h1>
 
- <svg id="circle-viz">
+ <svg id="square-viz">
      
  </svg>
  
- <button onclick="drawCircles(data1)">Data 1</button>
- <button onclick="drawCircles(data2)">Data 2</button>
+ <button onclick="drawSquares(data1)">Data 1</button>
+ <button onclick="drawSquares(data2)">Data 2</button>
 
  <script>
 
@@ -50,20 +50,20 @@
          }
         ];
 
-        function drawCircles(dataArray) {
+        function drawSquares(dataArray) {
            
-            function circlePosition() {
+            function squarePosition() {
                 return Math.random() * 100 + 50;
             }
 
-            var circles = d3.select("#circle-viz").selectAll("circle")
+            var squares = d3.select("#square-viz").selectAll("square")
              .data(dataArray, function(d) {
                  return d.country;
              }
         );
         
-        // Entering Circles
-        circles.enter().append("circle")
+        // Entering Squares
+        squares.enter().append("square")
          .attr("fill", function(d) {
              if (d.country == "usa") {
              return "blue";
@@ -78,21 +78,21 @@
          .attr("id", function(d){
              return d.country;
          })
-         .attr("cy", "100")
-         .attr("cx", circlePosition)    
-         .attr("r", "0")
+         .attr("x", "100")
+         .attr("y", squarePosition)    
+         .attr("width", "height")
          .transition().duration(1000)
             .attr("r", "25");
         
-        // Updating Circles
-        circles
+        // Updating Squares
+        squares
          .transition().duration(1000)
-         .attr("cx", circlePosition);
+         .attr("x", squarePosition);
         
-        // Exiting Circles
-        circles.exit()
+        // Exiting Squares
+        squares.exit()
           .transition().duration(1000)
-          .attr("r","100")
+          .attr("x","100")
           .remove();
 
          }
