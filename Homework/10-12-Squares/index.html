@@ -30,22 +30,22 @@
      .attr("class", "funkyText");
      var data1 = [
          {
-             country: "usa",
+             strain: "indigo",
              value: 12412341
          },
          {
-             country: "usa",
+             strain: "sativa",
              value: 12412341
          }
      ];
 
      var data2 = [
          {
-             country: "chn",
+             strain: "bluehaze",
              value: 32412341
          },
          {
-             country: "mxn",
+             strain: "greencrack",
              value: 24123410
          }
         ];
@@ -58,31 +58,31 @@
 
             var squares = d3.select("#square-viz").selectAll("square")
              .data(dataArray, function(d) {
-                 return d.country;
+                 return d.strain;
              }
         );
         
         // Entering Squares
         squares.enter().append("square")
          .attr("fill", function(d) {
-             if (d.country == "usa") {
-             return "blue";
+             if (d.strain == "indigo") {
+             return "purple";
              }
-         else if (d.country == "mxn") {
+         else if (d.strain == "sativa") {
                 return "green"
             }
-             else if (d.country == "chn") {
-                return "red"
+             else if (d.strain == "bluehaze") {
+                return "blue"
             }
          })
          .attr("id", function(d){
-             return d.country;
+             return d.strain;
          })
          .attr("x", "100")
          .attr("y", squarePosition)    
          .attr("width", "height")
          .transition().duration(1000)
-            .attr("r", "25");
+            .attr("xy", "25");
         
         // Updating Squares
         squares
