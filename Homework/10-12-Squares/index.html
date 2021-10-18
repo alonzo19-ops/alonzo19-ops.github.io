@@ -45,9 +45,8 @@
 
      var bright = [
 
-        
-         {
-             color: "yellow"
+        {
+             color: "yellow",
              value: 100
          },
          {
@@ -66,7 +65,7 @@
 
      var dark = [
          {
-             color: "black",
+             color: "magenta",
              value: 350
          },
          {
@@ -95,10 +94,11 @@
              }
         );
         function rectPosition() {
-                return Math.random() * 200 + 50;
+                return Math.random() * 700 + 50;
             }
         // Entering Squares
-        rect.enter().append("rect")
+        rect.enter()
+        .append("rect")
          .attr("fill", function(d) {
              if (d.color == "yellow") {
              return "yellow";
@@ -112,8 +112,9 @@
         else if (d.color == "lightblue") {
                 return "lightblue"
             }
-            else if (d.color == "black") {
-                return "black"
+            else if (d.color == "magenta") {
+                return "magenta"
+            }               return "black"
             }
         else if (d.color == "brown") {
                 return "brwon"
@@ -133,7 +134,7 @@
         // Updating Squares
         rect
          .transition().duration(1000)
-         .attr("x", 150);
+         .attr("x", 150)
          .attr("y", rectPosition);
         
         // Exiting Squares
