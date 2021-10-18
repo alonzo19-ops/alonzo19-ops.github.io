@@ -39,10 +39,8 @@
     <rect
       id="my_rect2" x="10" y="200"
       width="200" height="30" stroke="white"
-      fill="lightpink" opacity=".4" stroke-width="1"/>
-      <rect x="20" y="225" width="200" height="30" stroke="white";></rect>
-      <rect x="30" y="225" width="200" height="30" stroke="white";></rect>
-      <rect x="40" y="225" width="200" height="30" stroke="white";></rect>
+      fill="pink" opacity=".4" stroke-width="1"/>
+      
 </svg>
 </div>
 
@@ -52,6 +50,7 @@
 function triggerTransitionPiping(){
 
 d3.select("#my_rect2")
+
 
   // First, make the bar wider
   .transition()
@@ -70,12 +69,10 @@ d3.select("#my_rect2")
   .transition()
   .duration(200)
   .attr("height", "25")
-  .attr("width", "25")
+  .attr("width", "25");
 
-  .transition()
-  .duration(100)
-  .rect.attr("x", function() {return Math.random() * 720});
 }
+
 </script>
 
   <script>
