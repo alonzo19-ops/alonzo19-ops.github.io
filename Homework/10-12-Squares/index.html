@@ -23,90 +23,91 @@
       <h1 id="title"> Squares</h1>
       <h6><a href="/index.html">Back to Home Page</a></h6>
 
-      <svg width="500" height="350" viewBox="0 0 500 350">
-        <path id="motionPath" fill="none" stroke="#000000" stroke-miterlimit="10" d="M202.4,58.3c-13.8,0.1-33.3,0.4-44.8,9.2
-        c-14,10.7-26.2,29.2-31.9,45.6c-7.8,22.2-13.5,48-3.5,70.2c12.8,28.2,47.1,43.6,68.8,63.6c19.6,18.1,43.4,26.1,69.5,29.4
-        c21.7,2.7,43.6,3.3,65.4,4.7c19.4,1.3,33.9-7.7,51.2-15.3c24.4-10.7,38.2-44,40.9-68.9c1.8-16.7,3.4-34.9-10.3-46.5
-        c-9.5-8-22.6-8.1-33.2-14.1c-13.7-7.7-27.4-17.2-39.7-26.8c-5.4-4.2-10.4-8.8-15.8-12.9c-4.5-3.5-8.1-8.3-13.2-11
-        c-6.2-3.3-14.3-5.4-20.9-8.2c-5-2.1-9.5-5.2-14.3-7.6c-6.5-3.3-12.1-7.4-19.3-8.9c-6-1.2-12.4-1.3-18.6-1.5
-        C222.5,59,212.5,57.8,202.4,58.3"/>
-        
-        <rect id="rect-viz"> width="1100px" height="250px">
-         
-        <animateMotion 
-                 xlink:href="#rect-viz"
-                 dur="20s"
-                 begin="0s"
-                 fill="freeze"
-                 repeatCount="indefinite">
-          <mpath xlink:href="#motionPath" />
-        </animateMotion>
-    
-    </svg>
+      HTML CSSResult Skip Results Iframe
+EDIT ON
+<svg width="500" height="350">
+  <style>
+    rect {
+      -moz-transform-origin: 75px 75px;
+      transform-origin: 50% 50%;
+    }
+  </style>
+  <rect id="deepPink-rectangle" width="50" height="50" x="225" y="125" fill="deepPink"  transform="rotate(0) translate(0 0)"/>
+  
+  <animateTransform 
+           xlink:href="#deepPink-rectangle"
+           attributeName="transform" 
+           attributeType="XML"
+           type="rotate"
+           from="0 250 150"
+           to="360 250 150"
+           dur="2s"
+           begin="0s"
+           repeatCount="indefinite"
+           fill="freeze"
+                    
+           />
+  <set xlink:href="#deepPink-rectangle" attributeName="fill"
+       to="#0099AA" begin="click" dur="3s" />
+  
+</svg>
  <h3>Click to see different squares</h3>
  <div>
-        <button onclick="drawrect(sativa)">Sativa</button>
-        <button onclick="drawrect(indica)">Indica</button>
+    <button onclick="drawRect(data1); 
+    myFunction();">Bright Squares</button>
+    <button onclick="drawRect(data1); 
+    myFunction();">Dark Squares</button>
  <script>
 
-     var color = "Pink";
+    
      var title = d3.select("#title");
      title
-     .style("color", "Pink")
-     .attr("class", "myText");
-     var sativa = [
+        .style("color", "Pink")
+        .attr("class", "myText");
+     var color="red";
+
+     var bright = [
+
         
          {
-             effect: "creative",
+             color: "yellow"
              value: 100
          }
          {
-             effect: "euphoria",
+             effect: "pink",
              value: 125
          }
          {
-             effect: "energetic",
+             effect: "lightgreen",
              value: 150
          }
          {
-             effect: "sociable",
+             effect: "lightblue",
              value: 200
          }
-         {
-             effect: "alert",
-             value: 250
-         }
-         {
-             effect: "cheerful",
-             value: 300
-         }
-     ]; 
+        ];
 
-     var Indica = [
+     var dark = [
          {
-             effect: "carefree",
+             effect: "black",
              value: 350
          },
          {
-             effect: "relaxed",
+             effect: "brown",
              value: 400
          }
          {
-             effect: "calm",
+             effect: "blue",
              value: 450
          }
         
          {
-             effect: "mellow",
+             effect: "purple",
              value: 500
          }
-         {
-             effect: "sleepy",
-             value: 550
-         }
+    
         ];
 
-    var 
 
         function drawRect(dataArray) {
            
@@ -124,42 +125,31 @@
         // Entering Squares
         rect.enter().append("rect")
          .attr("fill", function(d) {
-             if (d.effect == "creative") {
-             return "purple";
+             if (d.color == "yellow") {
+             return "yellow";
              }
-         else if (d.effect == "euphoria") {
-                return "green"
+         else if (d.color == "pink") {
+                return "pink"
             }
-             else if (d.effect == "energetic") {
-                return "blue"
+             else if (d.color == "lightgreen") {
+                return "lightgreen"
             }
-        else if (d.effect == "sociable") {
-                return "green"
+        else if (d.color == "lightblue") {
+                return "lightblue"
             }
-            else if (d.effect == "alert") {
-                return "blue"
+            else if (d.color == "black") {
+                return "black"
             }
-        else if (d.effect == "cheerful") {
-                return "green"
+        else if (d.color == "brown") {
+                return "brwon"
             }
-         else if (d.effect == "carefree") {
-                return "blue"
+         else if (d.color == "purple") {
+                return "purple"
             }
-         else if (d.effect == "relaxed") {
-                return "green"
-            }
-         else if (d.effect == "calm") {
-                return "blue"
-            } 
-        else if (d.effect == "mellow") {
-                return "green"
-            }
-        else if (d.effect == "sleepy") {
-                return "blue"
-            } 
+          
          })
          .attr("id", function(d){
-             return d.effect;
+             return d.color;
          })
          .attr("x", rectPosition)    
          .attr("y", "150")
