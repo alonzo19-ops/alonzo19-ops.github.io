@@ -151,8 +151,10 @@ EDIT ON
          .attr("id", function(d){
              return d.color;
          })
-         .attr("x", rectPosition)    
-         .attr("y", "150")
+         .attr("x", "400")    
+         .attr("y", function(d){
+             return d.value
+         })
          .attr("width", "150")
          .attr("height", "150")
          .transition().duration(2000)
