@@ -92,7 +92,7 @@
             var rect = d3.select("#rect-viz")
             .selectAll("rect")
              .data(dataArray, function(d) {
-                 return d.effect;
+                 return d.color;
              }
         );
         
@@ -126,9 +126,7 @@
              return d.color;
          })
          .attr("x", "400")    
-         .attr("y", function(d){
-             return d.value
-         })
+         .attr("y", rectPostion)
          .attr("width", "150")
          .attr("height", "150")
          .transition().duration(2000)
@@ -137,7 +135,7 @@
         // Updating Squares
         rect
          .transition().duration(1000)
-         .attr("x", rectPosition);
+         .attr("x", 150);
          .attr("y", rectPosition);
         
         // Exiting Squares
