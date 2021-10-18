@@ -38,8 +38,11 @@
  <svg width="960px" height="400px">
     <rect
       id="my_rect2" x="10" y="200"
-      width="200" height="30" stroke="black"
-      fill="#p" opacity=".4" stroke-width="1"/>
+      width="200" height="30" stroke="white"
+      fill="lightpink" opacity=".4" stroke-width="1"/>
+      <rect x="20" y="225" width="200" height="30" stroke="white";></rect>
+      <rect x="30" y="225" width="200" height="30" stroke="white";></rect>
+      <rect x="40" y="225" width="200" height="30" stroke="white";></rect>
 </svg>
 </div>
 
@@ -57,17 +60,21 @@ d3.select("#my_rect2")
 
   // Second, higher
   .transition()
-  .attr("height", "100")
+  .attr("height", "200")
 
   // Change its color
   .transition()
-  .style("fill", "periwinkle")
+  .style("fill", "lightblue")
 
   // And now very small
   .transition()
   .duration(200)
-  .attr("height", "10")
-  .attr("width", "10")
+  .attr("height", "25")
+  .attr("width", "25")
+
+  .transition()
+  .duration(100)
+  .rect.attr("x", function() {return Math.random() * 720});
 }
 </script>
 
