@@ -114,20 +114,24 @@
             }
             else if (d.color == "magenta") {
                 return "magenta"
-            }               return "black"
+            
             }
         else if (d.color == "brown") {
-                return "brwon"
+                return "brown"
             }
          else if (d.color == "purple") {
                 return "purple"
-            }
+             }
+             else if (d.color == "blue") {
+                return "blue"   
           
-         })
+         }
+        })
+
          .attr("x", "rectPostion")    
-         .attr("y", "150")
-         .attr("width", "150")
-         .attr("height", "150")
+         .attr("y", "100")
+         .attr("width", "100")
+         .attr("height", "100")
          .transition().duration(2000)
             .attr("x", "50");
         
