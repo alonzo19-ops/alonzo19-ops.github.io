@@ -22,36 +22,10 @@
   <body>
       <h1 id="title"> Squares</h1>
       <h6><a href="/index.html">Back to Home Page</a></h6>
+      <h3>Click to see different squares</h3>
+      <svg id="rect-viz"></svg>
 
-      HTML CSSResult Skip Results Iframe
-EDIT ON
-<svg width="500" height="350">
-  <style>
-    rect {
-      -moz-transform-origin: 75px 75px;
-      transform-origin: 50% 50%;
-    }
-  </style>
-  <rect id="deepPink-rectangle" width="50" height="50" x="225" y="125" fill="deepPink"  transform="rotate(0) translate(0 0)"/>
-  
-  <animateTransform 
-           xlink:href="#deepPink-rectangle"
-           attributeName="transform" 
-           attributeType="XML"
-           type="rotate"
-           from="0 250 150"
-           to="360 250 150"
-           dur="2s"
-           begin="0s"
-           repeatCount="indefinite"
-           fill="freeze"
-                    
-           />
-  <set xlink:href="#deepPink-rectangle" attributeName="fill"
-       to="#0099AA" begin="click" dur="3s" />
-  
-</svg>
- <h3>Click to see different squares</h3>
+
  <div>
     <button onclick="drawRect(bright); 
     myFunction();">Bright Squares</button>
@@ -72,37 +46,37 @@ EDIT ON
          {
              color: "yellow"
              value: 100
-         }
+         },
          {
-             effect: "pink",
+             color: "pink",
              value: 125
-         }
+         },
          {
-             effect: "lightgreen",
+             color: "lightgreen",
              value: 150
-         }
+         },
          {
-             effect: "lightblue",
+             color: "lightblue",
              value: 200
          }
         ];
 
      var dark = [
          {
-             effect: "black",
+             color: "black",
              value: 350
          },
          {
-             effect: "brown",
+             color: "brown",
              value: 400
-         }
+         },
          {
-             effect: "blue",
+             color: "blue",
              value: 450
-         }
+         },
         
          {
-             effect: "purple",
+             color: "purple",
              value: 500
          }
     
