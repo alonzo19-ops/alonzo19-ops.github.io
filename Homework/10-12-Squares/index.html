@@ -39,51 +39,51 @@
         
          {
              effect: "creative",
-             value: 12412341
+             value: 100
          }
          {
              effect: "euphoria",
-             value: 12412341
+             value: 125
          }
          {
              effect: "energetic",
-             value: 24123410
+             value: 150
          }
          {
              effect: "sociable",
-             value: 24123410
+             value: 200
          }
          {
              effect: "alert",
-             value: 24123410
+             value: 250
          }
          {
              effect: "cheerful",
-             value: 24123410
+             value: 300
          }
      ]; 
 
      var Indica = [
          {
              effect: "carefree",
-             value: 32412341
+             value: 350
          },
          {
              effect: "relaxed",
-             value: 24123410
+             value: 400
          }
          {
              effect: "calm",
-             value: 24123410
+             value: 450
          }
         
          {
              effect: "mellow",
-             value: 24123410
+             value: 500
          }
          {
              effect: "sleepy",
-             value: 24123410
+             value: 550
          }
         ];
 
@@ -92,7 +92,7 @@
         function drawRect(dataArray) {
            
             function rectPosition() {
-                return Math.random() * 200 + 800;
+                return Math.random() * 200 + 50;
             }
 
             var rect = d3.select("#rect-viz")
@@ -147,12 +147,13 @@
          .attr("width", "150")
          .attr("height", "150")
          .transition().duration(2000)
-            .attr("x", "150");
+            .attr("x", "50");
         
         // Updating Squares
         rect
          .transition().duration(1000)
          .attr("x", rectPosition);
+         .attr("y", rectPosition);
         
         // Exiting Squares
         rect.exit()
