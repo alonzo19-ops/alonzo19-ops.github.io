@@ -17,98 +17,151 @@
       </style>
     </head>
   <body>
-      <h1 id="title"> My Cool Squares</h1>
-    <svg id="rect-viz"> width=""
+      <h1 id="title"> Cannabis Strain Facts</h1>
+      <h2> id="information"> What are the differences?</h2>
+      <h3><a href="/index.html">Back to Home Page</a></h3>
+    
+          <svg id="rect-viz">
      
  </svg>
- 
- <button onclick="drawSquares(data1)">Data 1</button>
- <button onclick="drawSquares(data2)">Data 2</button>
-
+ <h3>Click to see different facts about cannabis effects</h3>
+ <div>
+        <button onclick="drawrect(sativa)">Sativa</button>
+        <button onclick="drawrect(indica)">Indica</button>
  <script>
 
      var color = "Pink";
      var title = d3.select("#title");
      title
      .style("color", "Pink")
-     .attr("class", "funkyText");
-     var data1 = [
+     .attr("class", "myText");
+     var sativa = [
+        
          {
-             strain: "indigo",
-             value: 12412341
-         },
-         {
-             strain: "sativa",
+             effect: "creative",
              value: 12412341
          }
-     ];
-
-     var data2 = [
          {
-             strain: "bluehaze",
+             effect: "euphoria",
+             value: 12412341
+         }
+         {
+             effect: "energetic",
+             value: 24123410
+         }
+         {
+             effect: "sociable",
+             value: 24123410
+         }
+         {
+             effect: "alert",
+             value: 24123410
+         }
+         {
+             effect: "cheerful",
+             value: 24123410
+         }
+     ]; 
+
+     var Indica = [
+         {
+             effect: "carefree",
              value: 32412341
          },
          {
-             strain: "greencrack",
+             effect: "relaxed",
+             value: 24123410
+         }
+         {
+             effect: "calm",
+             value: 24123410
+         }
+        
+         {
+             effect: "mellow",
+             value: 24123410
+         }
+         {
+             effect: "sleepy",
              value: 24123410
          }
         ];
 
-        function drawSquares(dataArray) {
+    var 
+
+        function drawRect(dataArray) {
            
-            function squarePosition() {
-                return Math.random() * 100 + 50;
+            function rectPosition() {
+                return Math.random() * 200 + 800;
             }
 
-            var squares = d3.select("#square-viz").selectAll("square")
+            var rect = d3.select("#rect-viz")
+            .selectAll("rect")
              .data(dataArray, function(d) {
-                 return d.strain;
+                 return d.effect;
              }
         );
         
         // Entering Squares
-        squares.enter().append("square")
+        rect.enter().append("rect")
          .attr("fill", function(d) {
-             if (d.strain == "indigo") {
+             if (d.effect == "creative") {
              return "purple";
              }
-         else if (d.strain == "sativa") {
+         else if (d.effect == "euphoria") {
                 return "green"
             }
-             else if (d.strain == "bluehaze") {
+             else if (d.effect == "energetic") {
                 return "blue"
             }
+        else if (d.effect == "sociable") {
+                return "green"
+            }
+            else if (d.effect == "alert") {
+                return "blue"
+            }
+        else if (d.effect == "cheerful") {
+                return "green"
+            }
+         else if (d.effect == "carefree") {
+                return "blue"
+            }
+         else if (d.effect == "relaxed") {
+                return "green"
+            }
+         else if (d.effect == "calm") {
+                return "blue"
+            } 
+        else if (d.effect == "mellow") {
+                return "green"
+            }
+        else if (d.effect == "sleepy") {
+                return "blue"
+            } 
          })
          .attr("id", function(d){
-             return d.strain;
+             return d.effect;
          })
-         .attr("x", "100")
-         .attr("y", squarePosition)    
-         .attr("width", "height")
-         .transition().duration(1000)
-            .attr("xy", "25");
+         .attr("x", rectPosition)    
+         .attr("y", "150")
+         .attr("width", "150")
+         .attr("height", "150")
+         .transition().duration(2000)
+            .attr("x", "150");
         
         // Updating Squares
-        squares
+        rect
          .transition().duration(1000)
-         .attr("x", squarePosition);
+         .attr("x", rectPosition);
         
         // Exiting Squares
-        squares.exit()
+        rect.exit()
           .transition().duration(1000)
-          .attr("x","100")
+          .attr("width","0")
           .remove();
 
          }
 
-
-
-    
-
-     
- </script>
+    </script>
   </body>
-   
-
-
 </html>
