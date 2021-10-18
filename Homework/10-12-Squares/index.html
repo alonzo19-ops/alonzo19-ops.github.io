@@ -27,10 +27,10 @@
 
 
  <div>
-    <button onclick="drawRect(bright); 
-    myFunction();">Bright Squares</button>
-    <button onclick="drawRect(dark); 
-    myFunction();">Dark Squares</button>
+    <button onclick="drawRect(bright)">Bright Squares</button>
+    <button onclick="drawRect(dark)">Dark Squares</button>
+ </div>
+ 
  <script>
 
     
@@ -84,17 +84,15 @@
 
         function drawRect(dataArray) {
            
-            function rectPosition() {
-                return Math.random() * 200 + 50;
-            }
-
-            var rect = d3.select("#rect-viz")
+           var rect = d3.select("#rect-viz")
             .selectAll("rect")
              .data(dataArray, function(d) {
                  return d.color;
              }
         );
-        
+        function rectPosition() {
+                return Math.random() * 200 + 50;
+            }
         // Entering Squares
         rect.enter().append("rect")
          .attr("fill", function(d) {
@@ -121,11 +119,8 @@
             }
           
          })
-         .attr("id", function(d){
-             return d.color;
-         })
-         .attr("x", "400")    
-         .attr("y", rectPostion)
+         .attr("x", "rectPostion")    
+         .attr("y", "150")
          .attr("width", "150")
          .attr("height", "150")
          .transition().duration(2000)
