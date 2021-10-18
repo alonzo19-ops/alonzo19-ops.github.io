@@ -33,11 +33,45 @@
  <div>
     <button onclick="drawRect(bright)">Bright Squares</button>
     <button onclick="drawRect(dark)">Dark Squares</button>
+    <button onclick="triggerTransitionPiping()">Trigger transition</button>
  </div>
+ <svg width="960px" height="400px">
+    <rect
+      id="my_rect2" x="10" y="200"
+      width="200" height="30" stroke="black"
+      fill="#69b3a2" stroke-width="1"/>
+</svg>
+</div>
+
  
  <script>
 
-    
+function triggerTransitionPiping(){
+
+d3.select("#my_rect2")
+
+  // First, make the bar wider
+  .transition()
+  .duration(2000)
+  .attr("width", "400")
+
+  // Second, higher
+  .transition()
+  .attr("height", "100")
+
+  // Change its color
+  .transition()
+  .style("fill", "red")
+
+  // And now very small
+  .transition()
+  .duration(200)
+  .attr("height", "10")
+  .attr("width", "10")
+}
+</script>
+
+  <script>
      var title = d3.select("#title");
      title
         .style("color", "Pink")
@@ -94,7 +128,7 @@
              }
         );
         function rectPosition() {
-                return Math.random() * 200 + 50;
+                return Math.random() * 200 + 80;
             }
         // Entering Squares
         rect.enter()
