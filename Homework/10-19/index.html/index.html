@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset = "utf-8" />
+      <title>hello </title>
+      <script src="https://d3js.org/d3.v4.min.js" ></script>
+</head>
+
+<body>
+
+    <h1 id="title">Data</h1>
+    <script>
+
+        // Loading TXT files
+        d3.csv("data.csv", function(error, data) {
+
+            if (error) {
+              console.log(error);
+            }
+            else {
+             console.log("we've got data!");
+             console.log(data);
+            
+            }  
+        });
+        
+        // Loading CSV files
+        d3.csv("data.csv", function(error, data){
+
+        // Looop through an array to change the String "value"
+        // into a number.
+        data.forEach(function(row) {
+            row.value = parseFloat(row.value);
+        });
+
+        var usData = data.filter(function(row) {
+            return row.country = "usa";
+        });
+
+        // Filter an Array of data only specific rows
+        // by returning a boolean value for each row.
+        var usData = data.filter(function(row){
+            return row.country == "usa";
+        });
+        console.log("usData", usData);
+
+        // Returns the smallest number given a specific
+        // data array
+        var minimumValue = d3.min(data, function(row) {
+            return row.value;
+        });
+
+        console.log("min", minimumValue);
+
+        var groupedData = d3.nest()
+        .key(function(d) {
+          return d.country
+        })
+        .entries(data);
+        console.log("groupedData", groupedData);
+        
+        // folding in full names based on an Object
+        var nameMapping = {
+            usa: "United States",
+            mxn: "Mexico",
+            can: "Canada",
+            chn: "China"
+        };
+        data.forEach(function(row) {
+            row.fullName =nameMapping[row.country];
+        });
+
+        console.log(data);
+
+    });
+
+       
+        // Loading JSON files
+        d3.json(url,function(error, countryData) {
+            console.log(countryData);
+        });
+
+        
+
+    </script>
+</body>
+
+</html>
