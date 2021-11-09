@@ -157,13 +157,13 @@
             .attr("height", function(d) {
               return barHeight(d.users);
             })
+            .style("fill", "#FFE4E1")
             .attr("x", function(d, i) {
               return x(i + 1);
             })
             .attr("y", function(d) {
               return y(d.users);
             })
-            .style("fill", "#C08081");
 
           // Bar "exit" events and animation
           bars.exit()
