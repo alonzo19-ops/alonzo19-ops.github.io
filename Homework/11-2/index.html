@@ -43,7 +43,7 @@
         left: 50
       };
 
-      var dataMax = 5;
+      var dataMax = 8;
       var data = [];
 
       var width = window.innerWidth;
@@ -60,8 +60,8 @@
       var x = d3.scaleBand()
         .domain(dataRange.reverse())
         .range([margin.left, margin.left + chartWidth])
-        .paddingInner(0.1)
-        .paddingOuter(0.2);
+        .paddingInner(0.4)
+        .paddingOuter(0.7);
 
       var barWidth = x.bandwidth();
 
