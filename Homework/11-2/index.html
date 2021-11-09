@@ -43,7 +43,7 @@
         left: 50
       };
 
-      var dataMax = 8;
+      var dataMax = 5;
       var data = [];
 
       var width = window.innerWidth;
@@ -120,8 +120,7 @@
             .attr("transform", "translate(0," + y(0) + ")")
             .transition().duration(frequency / 2)
             .call(xAxis)
-            .attr("font-family", "Verdana, Geneva, Tahoma, sans-serif")
-            .attr("font-size" , "30px");
+            .attr("font-family", "Verdana, Geneva, Tahoma, sans-serif");
 
           function zeroState(selection) {
             selection
