@@ -12,10 +12,20 @@
         background-color: rgb(219,112,147);
         font-weight: bold;
       }
+      h1 {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:#98777b
+      }
+      h2{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color:#AA4069
+      }
     </style>
   </head>
   <body>
 
+    <h1>Bars</h1>
+    <h2><a href="/index.html">Back to main page</a></h2>
     <svg id="chart">
       <g id="shapes"></g>
       <g id="x"></g>
@@ -25,12 +35,12 @@
     <script>
 
       var url = "https://whiteboard.datawheel.us/api/google-analytics/realtime/random";
-      var frequency = 1 * 1000;
+      var frequency = 3 * 1000;
       var margin = {
         top: 40,
         right: 40,
-        bottom: 80,
-        left: 60
+        bottom: 50,
+        left: 50
       };
 
       var dataMax = 5;
@@ -82,7 +92,9 @@
           svg.select("#y")
             .attr("transform", "translate(" + margin.left + ",0)")
             .transition().duration(frequency / 2)
-            .call(yAxis);
+            .call(yAxis)
+            .attr("font-family", "Verdana, Geneva, Tahoma, sans-serif")
+            .attr("font-size", "30px");
 
           var xAxis = d3.axisBottom(x)
             .tickFormat(function(d) {
@@ -107,7 +119,9 @@
           svg.select("#x")
             .attr("transform", "translate(0," + y(0) + ")")
             .transition().duration(frequency / 2)
-            .call(xAxis);
+            .call(xAxis)
+            .attr("font-family", "Verdana, Geneva, Tahoma, sans-serif")
+            .att("font-size" , "30px");
 
           function zeroState(selection) {
             selection
@@ -126,6 +140,7 @@
             .attr("class", "bar")
             .call(zeroState)
             .attr("width", barWidth)
+            .style("fill","#AA98A9")
             .attr("x", function(d, i) {
               return x(i + 1);
             })
@@ -147,7 +162,8 @@
             })
             .attr("y", function(d) {
               return y(d.users);
-            });
+            })
+            .style("fill", "#C08081");
 
           // Bar "exit" events and animation
           bars.exit()
