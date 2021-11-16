@@ -1,4 +1,4 @@
-var url = "var url = "var url = "https://c.tenor.com/COljs_3NzNgAAAAC/420-421.gif";
+var url = "https://c.tenor.com/COljs_3NzNgAAAAC/420-421.gif";
 d3.json(url, function(error, data) {
 
   if (!error) {
