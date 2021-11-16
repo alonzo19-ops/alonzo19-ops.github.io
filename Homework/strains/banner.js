@@ -6,7 +6,7 @@ d3.json(url, function(error, data) {
       .style("background-image", "url('" + data[0].url + "')");
   }
 
-});"
+});
 d3.json(url, function(error, data) {
 
   if (!error) {
