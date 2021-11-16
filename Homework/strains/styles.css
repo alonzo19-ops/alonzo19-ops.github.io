@@ -18,11 +18,11 @@ body {
 }
 
 .section p {
-  flex: 1;
+  flex: ;
 }
 
 .section svg {
-  border: 1px solid red;
+  border: 1px solid peachpuff;
   flex: 2;
   height: 300px;
   margin: 20px;
@@ -39,7 +39,7 @@ body {
 }
 
 #tooltip {
-  background: lightskyblue;
+  background: lightblue;
   border: 1px solid black;
   border-radius: 5px;
   display: none;
@@ -49,4 +49,24 @@ body {
 
 body {
   background-color: powderblue;
+}
+
+ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  border:1px dotted lightseagreen;
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap-reverse;
+  justify-content:space-between;
+  align-items:center;
+  height:200px;
+
+}
+
+li {
+  border:1px solid peachpuff;
+  margin:0.5;
+  padding:0.2;
 }
