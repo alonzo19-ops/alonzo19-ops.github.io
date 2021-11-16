@@ -14,7 +14,9 @@ d3.json(url, function(error, data) {
       .style("background-image", "url('" + data[0].url + "')");
   }
 
-});://api.thecatapi.com/v1/images/search";
+});
+
+//api.thecatapi.com/v1/images/search";
 d3.json(url, function(error, data) {
 
   if (!error) {
