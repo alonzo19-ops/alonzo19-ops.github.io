@@ -18,4 +18,4 @@ d3.select(window)
     var y = bannerPosition(window.scrollY);
     d3.select("#banner")
       .style("background-position", "50% " + y + "%");
-  });
+  }); 
