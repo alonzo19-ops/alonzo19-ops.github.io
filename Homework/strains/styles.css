@@ -40,7 +40,7 @@ background-size: contain
 
 @media (max-width: 600px) {
   .section {
-    flex-direction: column;
+    flex-direction: row;
   }
   .section svg {
     flex: none;
