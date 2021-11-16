@@ -1,45 +1,48 @@
-<link rel="stylesheet" href="/styles.css" />
-
 body {
-        font-family: "Comic Sans MS";
-        margin: 0;
-        background-color: lightblue;
-      }
-      
-#banner {
-        background-color: #00cc00;
-        background-image: url("https://c.tenor.com/COljs_3NzNgAAAAC/420-421.gif");
-        background-position: center;
-        background-size: cover;
-        padding: 20vh 20px;
-        text-align: center;
-      }
-   
-
-
+  margin: 0;
 }
-.section {
-        display: flex;
-        padding: 50px;
-      }
-      
-      .section p {
-        flex: 1;
-      }
-      
-      .section svg {
-        border: 1px solid red;
-        flex: 2;
-        height: 300px;
-        margin: 20px;
-      }
 
-      @media (max-width: 600px) {
-        .section {
-          flex-direction: column;
-        }
-        .section svg {
-          flex: none;
-        }
-      }
-    
+#banner {
+  background-color: #cccccc;
+  background-position: 50% 100%;
+  background-size: cover;
+  font-family: "Comic Sans MS";
+  padding: 20vh 20px;
+  text-align: center;
+}
+
+.section {
+  align-items: center;
+  display: flex;
+  padding: 50px;
+}
+
+.section p {
+  flex: 1;
+}
+
+.section svg {
+  border: 1px solid red;
+  flex: 2;
+  height: 300px;
+  margin: 20px;
+}
+
+@media (max-width: 600px) {
+  .section {
+    flex-direction: column;
+  }
+  .section svg {
+    flex: none;
+    width: 100%;
+  }
+}
+
+#tooltip {
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: none;
+  padding: 5px;
+  position: absolute;
+}
