@@ -11,6 +11,16 @@ body {
   text-align: center;
 }
 
+#chart1 {
+background-image: url("https://th.bing.com/th/id/OIP.jsWb9dvwGKxheIiTTyGZQAHaEH?w=315&h=180&c=7&r=0&o=5&dpr=2.2&pid=1.7"); 
+
+}
+
+#chart2 {
+var src = document.getElementById("x"); 
+background-image: url(https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2018/02/28122155/Lab-B.png);
+}
+
 .section {
   align-items: center;
   display: flex;
