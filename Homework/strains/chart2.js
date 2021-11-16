@@ -14,3 +14,9 @@ d3.select("#chart2")
     d3.select("#tooltip")
       .style("display", "none");
   });
+  var img = document.createElement("img"); 
+ 
+img.src = "https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2018/02/28122155/Lab-B.png"; 
+var src = document.getElementById("x"); 
+ 
+src.appendChild(img); 

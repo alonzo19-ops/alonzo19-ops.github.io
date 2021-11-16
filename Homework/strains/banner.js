@@ -1,6 +1,6 @@
 var img = document.createElement("img"); 
  
-img.src = "ttp://www.gettyimages.com/detail/1276624551"; 
+img.src = "http://www.gettyimages.com/detail/1276624551"; 
 var src = document.getElementById("x"); 
  
 src.appendChild(img); 
