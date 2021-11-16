@@ -1,8 +1,9 @@
-function add_img() {
-        var img = document.createElement('img')
-image.src = "http://www.gettyimages.com/detail/1276624551";
-document.getElementById('body').appendChild(img);
-}
+var img = document.createElement("img"); 
+ 
+img.src = "ttp://www.gettyimages.com/detail/1276624551"; 
+var src = document.getElementById("x"); 
+ 
+src.appendChild(img); 
 
 var bannerPosition = d3.scaleLinear()
   .domain([0, window.innerHeight])
