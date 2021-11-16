@@ -17,7 +17,6 @@ background-image: url("https://th.bing.com/th/id/OIP.jsWb9dvwGKxheIiTTyGZQAHaEH?
 }
 
 #chart2 {
-var src = document.getElementById("x"); 
 background-image: url(https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2018/02/28122155/Lab-B.png);
 }
 
