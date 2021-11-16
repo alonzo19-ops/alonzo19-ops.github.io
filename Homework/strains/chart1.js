@@ -14,9 +14,4 @@ d3.select("#chart1")
     d3.select("#tooltip")
       .style("display", "none");
   });
-  var img = document.createElement("img"); 
- 
-img.src = "https://th.bing.com/th/id/OIP.jsWb9dvwGKxheIiTTyGZQAHaEH?w=315&h=180&c=7&r=0&o=5&dpr=2.2&pid=1.7"; 
-var src = document.getElementById("x"); 
- 
-src.appendChild(img); 
+  
