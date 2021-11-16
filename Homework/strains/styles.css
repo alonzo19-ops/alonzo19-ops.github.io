@@ -3,7 +3,7 @@ body {
 }
 
 #banner {
-  background-color: #864c92;
+  background-image: url(https://media.gettyimages.com/photos/cannabis-leaf-on-colored-background-picture-id1276624551?s=2048x2048);
   background-position: 50% 100%;
   background-size: cover;
   font-family: "Comic Sans MS";
@@ -45,4 +45,8 @@ body {
   display: none;
   padding: 5px;
   position: absolute;
+}
+
+body {
+  background-color: powderblue;
 }
