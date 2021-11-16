@@ -12,6 +12,14 @@ body {
   text-align: center;
 }
 
+h1 {
+  color: plum
+
+}
+p {
+  color:plum
+}
+
 #chart1 {
 background-image: url("https://th.bing.com/th/id/OIP.jsWb9dvwGKxheIiTTyGZQAHaEH?w=315&h=180&c=7&r=0&o=5&dpr=2.2&pid=1.7"); 
 background-size: contain;
