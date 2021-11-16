@@ -1,4 +1,4 @@
-var url = "https://th.bing.com/th/id/OIP.nA48noRrPUqUoVYKtGwl8gHaEL?w=309&h=180&c=7&r=0&o=5&dpr=2.2&pid=1.7";
+var url = "https://www.longwoodherbal.org/wp-content/uploads/2019/10/thc-cbd.jpg";
 
 d3.json(url, function(error, data) {
 
