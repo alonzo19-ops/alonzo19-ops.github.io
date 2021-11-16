@@ -1,6 +1,6 @@
 function add_img() {
         var img = document.createElement('img')
-image.src = "https://www.longwoodherbal.org/wp-content/uploads/2019/10/thc-cbd.jpg";
+image.src = "http://www.gettyimages.com/detail/1276624551";
 document.getElementById('body').appendChild(img);
 }
 
