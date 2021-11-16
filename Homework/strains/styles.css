@@ -66,11 +66,7 @@ body {
   
 }
 
-@media(min-width:900px){
-  .call-outs-container
-  display: flex;
-  justify-content: space-between;
-}
+
 .call-out{
   padding: 20px;
   box-sizing: border-box;
