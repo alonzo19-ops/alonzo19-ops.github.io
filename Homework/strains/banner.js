@@ -1,13 +1,8 @@
-var url = "https://www.longwoodherbal.org/wp-content/uploads/2019/10/thc-cbd.jpg";
-
-d3.json(url, function(error, data) {
-
-  if (!error) {
-    d3.select("#banner")
-      .style("background-image", "url('" + data[0].url + "')");
-  }
-
-});
+function add_img() {
+        var img = document.createElement('img')
+image.src = "https://www.longwoodherbal.org/wp-content/uploads/2019/10/thc-cbd.jpg";
+document.getElementById('body').appendChild(img);
+}
 
 var bannerPosition = d3.scaleLinear()
   .domain([0, window.innerHeight])
