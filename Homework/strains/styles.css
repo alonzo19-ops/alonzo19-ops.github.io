@@ -100,7 +100,7 @@ section{
 .footer #button{
 	width:35px;
 	height:35px;
-	border: #727172 12px solid;
+	border: peachpuff 12px solid;
 	border-radius:35px;
 	margin:0 auto;
 	position:relative;
@@ -151,7 +151,7 @@ height:100%;
   position:relative;
   top:0;
   left:0;
-	background: #3A3A3A;
+	background: peachpuff;
 }
 .footer #cont{
   position:relative;
