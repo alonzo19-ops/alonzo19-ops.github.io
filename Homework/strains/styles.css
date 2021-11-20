@@ -85,9 +85,9 @@ body {
   flex-direction: row;
 }
 
-.call-out:first-child(rudalis) {background-color: peachpuff;}
-.call-out:second-child(sativa)  {background-color: plum;}
-.call-out:third-child(indica)  {background-color: rgb(135, 204, 135);}
+.Indigo {background-color: peachpuff;}
+.Rudalis {background-color: plum;}
+.Sativa {background-color: rgb(135, 204, 135);}
 
 .footer {
   position:fixed;
