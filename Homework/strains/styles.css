@@ -21,8 +21,10 @@ p {
 }
 
 #chart1 {
-background-image: url("https://th.bing.com/th/id/OIP.jsWb9dvwGKxheIiTTyGZQAHaEH?w=315&h=180&c=7&r=0&o=5&dpr=2.2&pid=1.7"); 
-background-size: contain;
+height: 500;
+width: 500;
+border-color: rgb(196, 196, 196);
+margin: 60,
 }
 
 #chart2 {
