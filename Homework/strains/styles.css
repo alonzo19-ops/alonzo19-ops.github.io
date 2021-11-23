@@ -23,8 +23,9 @@ p {
 #chart1 {
 height: 500;
 width: 500;
-border-color: peachpuff
-margin: 60,
+border-color: peachpuff;
+border-width: 2;
+margin: 60;
 }
 
 #chart2 {
