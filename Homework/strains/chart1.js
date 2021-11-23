@@ -21,7 +21,7 @@ d3.select("#chart1")
   purple_pink_gradient.addColorStop(0, 'pink');
   purple_pink_gradient.addColorStop(1, 'purple');
 
-  var bar_chart = new CharacterData(bar_ctx, {
+  var bar_chart = new Chart (bar_ctx, {
     type: 'bar',
     data: {
         labels: ["Wonder Woman", "Werewolf","Platinum"],
