@@ -17,27 +17,33 @@ selectall()
       .style("display", "none");
   });
 
-  anychart.chart1(function()
-  {
+  var bar_ctx = document.getElementById('chart1').getcontext('2d');
 
-    var data= {
-      header: ["strain", "Cannaboids"],
-      rows: [
-        ["Wonder Woman", 55],
-        ["werewolf", 45]
-      ]};
-      
-  var stackedBar = chart1(ctx, {
+  var purple_pink_gradient = bar_ctx.createLinearGradient(0, 0, 0, 600);
+  purple_pink_gradient.addColorStop(0, 'pink');
+  purple_pink_gradient.addColorStop(1, 'purple');
+
+  var bar_chart = new CharacterData(bar_ctx, {
     type: 'bar',
-    data: data,
-    options: {
-      scales: {
-        x: {
-            stacked: true
-        },
-        y: {
-          stacked: true 
-        }
-        }
-      }
-    });
+    data: {
+        labels: ["Wonder Woman", "Werewolf","Platinum"],
+        datasets: [{
+            label: '# of Cannabinoids',
+            data: [55, 45, 30],
+            backgroundColor: purple_pink_gradient,
+            hoverBackgroundColor: purple_pink_gradient,
+            hoverBorderWidth: 2,
+            hoverBorderColor: 'purple'
+        }]
+    },
+  options: {
+    scales : {
+        yAxes: [{
+          ticks: {
+            beginAtZero:true
+          }
+        }]
+    }
+  }
+});
+    
