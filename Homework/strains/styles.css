@@ -23,13 +23,12 @@ p {
 #chart1 {
 height: 500;
 width: 500;
-border-color: rgb(196, 196, 196);
+border-color: peachpuff
 margin: 60,
 }
 
 #chart2 {
-background-image: url(https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2018/02/28122155/Lab-B.png);
-background-size: contain
+
 }
 
 .section {
