@@ -15,3 +15,5 @@ d3.select("#chart1")
       .style("display", "none");
   });
   
+  var dataArray = [23, 14, 21, 14, 37, 15, 18, 34, 30];
+  
