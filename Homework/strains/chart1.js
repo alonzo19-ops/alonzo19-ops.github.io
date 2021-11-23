@@ -15,7 +15,7 @@ d3.select("#chart1")
       .style("display", "none");
   });
 
-  var bar_ctx = document.getElementById('chart1').getcontext('2d');
+  var bar_ctx = document.getElementById('chart1').getContext('2d');
 
   var purple_pink_gradient = bar_ctx.createLinearGradient(0, 0, 0, 600);
   purple_pink_gradient.addColorStop(0, 'pink');
