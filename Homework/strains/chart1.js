@@ -1,6 +1,4 @@
 d3.select("#chart1")
-selectall()
-.data(goals)
 .on("mousemove", function() {
 
     var tooltip = d3.select("#tooltip")
