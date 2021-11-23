@@ -26,11 +26,18 @@ selectall()
         ["Wonder Woman", 55],
         ["werewolf", 45]
       ]};
-  var chart = anychart.column();
-
-  chart.data(data);
-
-  chart.title("Strains Breakdown");
-
-  chart.container("container");
-  chart.draw();
+      
+  var stackedBar = chart1(ctx, {
+    type: 'bar',
+    data: data,
+    options: {
+      scales: {
+        x: {
+            stacked: true
+        },
+        y: {
+          stacked: true 
+        }
+        }
+      }
+    });
