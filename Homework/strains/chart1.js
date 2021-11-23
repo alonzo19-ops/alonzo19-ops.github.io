@@ -1,5 +1,7 @@
 d3.select("#chart1")
-  .on("mousemove", function() {
+selectall()
+.data(goals)
+.on("mousemove", function() {
 
     var tooltip = d3.select("#tooltip")
       .style("display", "block")
@@ -14,6 +16,21 @@ d3.select("#chart1")
     d3.select("#tooltip")
       .style("display", "none");
   });
-  
-  var dataArray = [23, 14, 21, 14, 37, 15, 18, 34, 30];
-  
+
+  anychart.chart1(function()
+  {
+
+    var data= {
+      header: ["strain", "Cannaboids"],
+      rows: [
+        ["Wonder Woman", 55],
+        ["werewolf", 45]
+      ]};
+  var chart = anychart.column();
+
+  chart.data(data);
+
+  chart.title("Strains Breakdown");
+
+  chart.container("container");
+  chart.draw();
