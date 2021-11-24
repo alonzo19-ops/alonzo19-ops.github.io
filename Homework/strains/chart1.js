@@ -30,8 +30,7 @@ d3.select("#chart1")
             data: [55, 45, 30],
             backgroundColor: purple_pink_gradient,
             hoverBackgroundColor: purple_pink_gradient,
-            hoverBorderWidth: 2,
-            hoverBorderColor: 'purple'
+            hoverBorderWidth: 2
         }]
     },
   options: {
