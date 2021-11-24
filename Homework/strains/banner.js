@@ -3,7 +3,7 @@ var img = document.createElement("img");
 img.src = "http://www.gettyimages.com/detail/1276624551"; 
 var src = document.getElementById("x"); 
  
-src.appendChild(img); 
+
 
 var bannerPosition = d3.scaleLinear()
   .domain([0, window.innerHeight])
