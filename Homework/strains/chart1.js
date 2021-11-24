@@ -15,19 +15,19 @@ d3.select("#chart1")
       .style("display", "none");
   });
 
-  var bar_ctx = document.getElementById('chart1').getContext('2d');
+  var bar_ctx = document.getElementById('bar_chart').getContext('2d');
 
   var purple_pink_gradient = bar_ctx.createLinearGradient(0, 0, 0, 600);
   purple_pink_gradient.addColorStop(0, 'pink');
   purple_pink_gradient.addColorStop(1, 'purple');
 
-  var chart1 = new Chart (bar_ctx, {
+  var bar_chart = new Chart (bar_ctx, {
     type: 'bar',
     data: {
-        labels: ["Wonder Woman", "Werewolf","Platinum"],
+        labels: ["Wonder Woman", "Werewolf",],
         datasets: [{
             label: '# of Cannabinoids',
-            data: [55, 45, 30],
+            data: [55, 45],
             backgroundColor: purple_pink_gradient,
             hoverBackgroundColor: purple_pink_gradient,
             hoverBorderWidth: 2
