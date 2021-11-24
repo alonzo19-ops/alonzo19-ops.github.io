@@ -15,13 +15,13 @@ d3.select("#chart1")
       .style("display", "none");
   });
 
-  var bar_ctx = document.getElementById('bar_chart').getContext('2d');
+  var bar_ctx = document.getElementById('chart1').getContext('2d');
 
   var purple_pink_gradient = bar_ctx.createLinearGradient(0, 0, 0, 600);
   purple_pink_gradient.addColorStop(0, 'pink');
   purple_pink_gradient.addColorStop(1, 'purple');
 
-  var bar_chart = new Chart (bar_ctx, {
+  var bar_chart = chart1 (bar_ctx, {
     type: 'bar',
     data: {
         labels: ["Wonder Woman", "Werewolf",],
