@@ -37,8 +37,12 @@ d3.select("#chart1")
   options: {
     scales : {
         yAxes: [{
+          categorySpacing: 0,
+          barthickness: 20
+        }],
+        xAxes: [{
           ticks: {
-            beginAtZero:true
+             beginAtZero:true
           }
         }]
     }
