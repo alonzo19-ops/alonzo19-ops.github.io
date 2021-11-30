@@ -187,15 +187,7 @@ height:100%;
   display: flex;
 }
 
-.row .section {
+.row .column {
   flex: 1;
-}
-
-.row .section {
-  flex: 2;
-}
-
-.row .section {
-  flex: 3;
 }
 
