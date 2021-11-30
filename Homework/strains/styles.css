@@ -19,7 +19,7 @@ h1 {
 
 }
 p {
-  color:plum
+  color:black
 }
 
 #chart1 {
@@ -90,20 +90,22 @@ body {
   background-color: peachpuff;
   height:fit-content;
   width:fit-content;
-  color:black
+  color:black;
+  font-style:oblique;
 }
 #Sativa {
   background-color: plum;
   height:fit-content;
   width:fit-content;
-  color: black
+  color: black;
+  font-style: oblique;
 }
 #Hybrids {
   background-color: rgb(135, 204, 135);
   height:fit-content;
   width:fit-content;
   font-style:oblique;
-  color:black
+  color:black;
 }
 
 .footer {
