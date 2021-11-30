@@ -92,6 +92,8 @@ body {
   width:fit-content;
   color:black;
   font-style:oblique;
+  border-color:cadetblue;
+  border-style: double;
 }
 #Sativa {
   background-color: plum;
@@ -99,6 +101,8 @@ body {
   width:fit-content;
   color: black;
   font-style: oblique;
+  border-color: cadetblue;
+  border-style: double;
 }
 #Hybrids {
   background-color: rgb(135, 204, 135);
@@ -106,6 +110,8 @@ body {
   width:fit-content;
   font-style:oblique;
   color:black;
+  border-color:cadetblue;
+  border-style: double;
 }
 
 .footer {
