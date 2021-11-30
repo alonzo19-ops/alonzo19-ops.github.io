@@ -17,4 +17,27 @@ d3.select("#chart1")
       .style("display", "none");
   });
 
- 
+const options = {
+  showlines: true,
+   scales: {
+     yAxes: [
+       {
+         ticks: {
+           min:0,
+           max:100,
+           stepSize: 20,
+           callback: function (value) {
+             return (value / this.max * 100) .toFixed(0) + '%'; // conver it to percentage?
+            },
+         },
+         type: "bar",
+         display: true,
+         postion: "left",
+         id: "y-axis-1",
+         gridLInes: {
+           drawOnArea: false,
+         },
+       },
+     ],
+ },
+};
