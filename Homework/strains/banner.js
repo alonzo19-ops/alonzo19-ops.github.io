@@ -4,7 +4,6 @@ img.src = "https://www.bing.com/images/search?view=detailV2&ccid=nA48noRr&id=058
 var src = document.getElementById("x"); 
  
 
-
 var bannerPosition = d3.scaleLinear()
   .domain([0, window.innerHeight])
   .range([100, 0]);
