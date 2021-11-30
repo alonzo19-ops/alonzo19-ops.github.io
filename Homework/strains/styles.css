@@ -90,16 +90,20 @@ body {
   background-color: peachpuff;
   height:fit-content;
   width:fit-content;
+  color:black
 }
 #Sativa {
   background-color: plum;
   height:fit-content;
   width:fit-content;
+  color: black
 }
 #Hybrids {
   background-color: rgb(135, 204, 135);
   height:fit-content;
   width:fit-content;
+  font-style:oblique;
+  color:black
 }
 
 .footer {
