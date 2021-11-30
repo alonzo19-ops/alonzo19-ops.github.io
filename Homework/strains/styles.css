@@ -10,10 +10,12 @@ body {
   font-size:large;
   padding: 20vh 20px;
   text-align: center;
+  text-align:bottom;
 }
 
 h1 {
-  color: plum
+  color: plum;
+  text-align:bottom;
 
 }
 p {
@@ -84,9 +86,15 @@ body {
   flex-direction: row;
 }
 
-.Indigo {background-color: peachpuff;}
-.Rudalis {background-color: plum;}
-.Sativa {background-color: rgb(135, 204, 135);}
+#Indica {
+  background-color: peachpuff;
+}
+#Sativa {
+  background-color: plum;
+}
+#Hybrids {
+  background-color: rgb(135, 204, 135);
+}
 
 .footer {
   position:fixed;
