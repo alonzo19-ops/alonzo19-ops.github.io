@@ -88,12 +88,18 @@ body {
 
 #Indica {
   background-color: peachpuff;
+  height:fit-content;
+  width:fit-content;
 }
 #Sativa {
   background-color: plum;
+  height:fit-content;
+  width:fit-content;
 }
 #Hybrids {
   background-color: rgb(135, 204, 135);
+  height:fit-content;
+  width:fit-content;
 }
 
 .footer {
