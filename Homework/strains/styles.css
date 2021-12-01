@@ -8,7 +8,7 @@ body {
   background-size: cover;
   font-family: "Comic Sans MS";
   font-size:large;
-  padding: 20vh 20px;
+  padding: 10vh 5px;
   text-align: center;
   text-align:bottom;
 }
@@ -99,7 +99,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 20vh 20px;
 }
 #Sativa {
   background-color: plum;
@@ -110,10 +110,7 @@ body {
   border-color: cadetblue;
   border-style: double;
   border-width: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 20vh 20px;
 }
 #Hybrids {
   background-color: rgb(135, 204, 135);
@@ -124,10 +121,7 @@ body {
   border-color:cadetblue;
   border-style: double;
   border-width: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 20vh 20px;
 }
 
 .footer {
