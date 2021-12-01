@@ -145,6 +145,7 @@
     
     // set the colors
     var z = d3.scaleOrdinal()
+        .domain(keys)
         .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
     
     // load the csv and create the chart
@@ -161,7 +162,17 @@
       x.domain(data.map(function(d) { return d.Strain; }));
       y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
       z.domain(keys);
-    
+      
+      console.log(data)
+      dataNormalized = []
+      data.forEach(function(d){
+
+        tot = 0
+        for (i in keys){ name=keys[i]; tot += +d[name]}
+        for (i in keys){ name=keys[i]; d[name] = d[name] /tot * 100}
+
+      })
+
       g.append("g")
         .selectAll("g")
         .data(d3.stack().keys(keys)(data))
