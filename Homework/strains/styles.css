@@ -96,6 +96,10 @@ body {
   border-color:cadetblue;
   border-style: double;
   border-width: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 #Sativa {
   background-color: plum;
@@ -106,6 +110,10 @@ body {
   border-color: cadetblue;
   border-style: double;
   border-width: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 #Hybrids {
   background-color: rgb(135, 204, 135);
@@ -116,6 +124,10 @@ body {
   border-color:cadetblue;
   border-style: double;
   border-width: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .footer {
