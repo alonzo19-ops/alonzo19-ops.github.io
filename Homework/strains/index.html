@@ -157,6 +157,8 @@
       if (error) throw error;
     
       var keys = data.columns.slice(1);
+
+      var keys =d3.map(data, function(d){return(d.group)}).keys()
     
       data.sort(function(a, b) { return b.total - a.total; });
       x.domain(data.map(function(d) { return d.Strain; }));
