@@ -8,13 +8,16 @@
   
 
   
-          <title>Basement Cannabis Strains</title>
+          <title>Basement Cannabis Sctrains</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
    
     <div id="banner">
-       <br><br><br><br><br><br><br>
+       <br><br><br><br><br><br><br><br><br><br>
+       <br><br><br><br><br><br><br><br><br><br>
+
+      
         <p>
        What is the differences between cannabis strains? <br> What 
        are the differences in potency levels regarding CBD and THC? 
@@ -24,39 +27,35 @@
     </div>
 
     <style>
-    .centeralign {
+    .rightalign {
       text-align:center;
     }
     </style>
 
-    
-    <style>
-        #chart1 {
-          width: 500px;
-        }
-        .axis .domain {
-          display: none;
-        }
-        </style>
+
         <div id="chart1">
         <svg width="500" height="500"></svg>
         </div>
 
-  <br><br><br>
-  <select>
-    <option value="Plant Type">Plant Type</option>
-    <option value="Sativa">Sativa</option>
-    <option value="Indica">Indica</option>
-    <option value="Both">Both</option>
-  </select>
-
+<style>
+    #chart1 {
+      width: 500px;
+    }
+    .axis .domain {
+      display: none;
+    }
+    </style>
+    
   
-  <select>
-    <option value="Cannabinoid Content">Cannabinoid Content</option>
-    <option value="CBD">CBD</option>
-    <option value="THC">THC</option>
-    <option value="Both">Both</option>
-  </select>
+
+  <div>
+<button onclick="changedata('THC&CBD')" class="CBD">CBD</button>
+<button onclick="changedata('Hybrid Mix')" class="Mix">MIX</button>
+
+</div>
+
+
+
 
 <br><br><br>
  <div class="row">
@@ -107,6 +106,7 @@
 <div id="container">
 <div id="cont">
 <div class="footer_center">
+  <br><br><br><br><br>
 	   <h6>Contact Email: alonzoceci19@gmail.com</h6>
 </div>
 </div>
@@ -125,6 +125,7 @@
 
     <script src="banner.js"></script>
     <script type="text/javascript" src="chart1.js"></script>
+    <script type="text/javascript" src="chart2.js"></script>
     <script>
     // create the svg
     var svg = d3.select("svg"),
@@ -148,7 +149,7 @@
     
     // set the colors
     var z = d3.scaleOrdinal()
-        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+        .range(["#F7E4E0", "#8a89a6"]);
     
     // load the csv and create the chart
     d3.csv("data.csv", function(d, i, columns) {
@@ -248,4 +249,8 @@
         
   
     </script>
+
+
+
+
 </html>

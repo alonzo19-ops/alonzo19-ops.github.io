@@ -3,16 +3,19 @@ body {
 }
 
 #banner {
-  background-image: url(https://media.gettyimages.com/photos/cannabis-leaf-on-colored-background-picture-id1276624551?s=2048x2048);
+  background-image: url(https://th.bing.com/th/id/OIP.2wFmiEDkw75OicYAYLi6IgHaFP?w=291&h=206&c=7&r=0&o=5&dpr=2.2&pid=1.7);
   background-position: 50% 100%;
   background-size: cover;
   font-family: "Comic Sans MS";
-  font-size:large;
-  padding: 10vh 5px;
+  font-size:x-large;
+  font-weight:bolder;
+  font-stretch: wider;
+  padding-top: 40px;
+  padding-bottom:2px;
   text-align: center;
   text-align:bottom;
 }
-
+https://th.bing.com/th/id/OIP.2wFmiEDkw75OicYAYLi6IgHaFP?w=291&h=206&c=7&r=0&o=5&dpr=2.2&pid=1.7;
 h1 {
   color: plum;
   text-align:bottom;
@@ -30,6 +33,13 @@ border-width: 2;
 margin: 60;
 }
 
+#chart2 {
+height: 500;
+width: 500;
+border-color: peachpuff;
+border-width: 2;
+margin: 60;
+}
 
 .section {
   align-items: center;
