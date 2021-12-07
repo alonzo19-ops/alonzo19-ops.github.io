@@ -18,14 +18,3 @@ d3.select("#chart1")
       .style("display", "none");
   });
 
-  const options = {
-    scales: {
-      y: {
-          ticks: {
-            format: {
-              style: 'percent'
-            }
-          }
-    }
-  }
-  };
