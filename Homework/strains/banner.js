@@ -1,6 +1,6 @@
 var img = document.createElement("img"); 
  
-img.src = "https://media.gettyimages.com/photos/cannabis-leaf-on-colored-background-picture-id1276624551?s=2048x2048"; 
+img.src = "https://th.bing.com/th/id/OIP.2wFmiEDkw75OicYAYLi6IgHaFP?w=291&h=206&c=7&r=0&o=5&dpr=2.2&pid=1.7"; 
 var src = document.getElementById("x"); 
  
 
