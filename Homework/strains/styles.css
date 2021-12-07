@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-  color: plum;
+  color: pink;
   text-align:bottom;
 
 }
@@ -103,7 +103,7 @@ body {
   width:fit-content;
   color:black;
   font-style:oblique;
-  border-color:cadetblue;
+  border-color:palevioletred;
   border-style: double;
   border-width: 10px;
   padding-left: 15px;
@@ -117,18 +117,18 @@ body {
   width:fit-content;
   color: black;
   font-style: oblique;
-  border-color: cadetblue;
+  border-color: palevioletred;
   border-style: double;
   border-width: 10px;
   padding: 20vh 20px;
 }
 #Hybrids {
-  background-color: rgb(135, 204, 135);
+  background-color: rgb(182, 253, 191);
   height:fit-content;
   width:fit-content;
   font-style:oblique;
   color:black;
-  border-color:cadetblue;
+  border-color:palevioletred;
   border-style: double;
   border-width: 10px;
   padding: 20vh 20px;
