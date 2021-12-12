@@ -17,7 +17,17 @@ body {
 }
 
 h1 {
-  color: mistyrose;
+  color: black;
+  text-align:bottom;
+  padding-left: 25;
+  padding-right: 25;
+  padding-top: 25;
+  padding-bottom: 25;
+
+}
+
+h2 {
+  color: black;
   text-align:bottom;
   padding-left: 25;
   padding-right: 25;
