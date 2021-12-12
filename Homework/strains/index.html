@@ -75,7 +75,21 @@
   
 
 
-<!-- <button onclick="changedata(Cannabinoids)">Cannabinoids</button>
+<button onclick="changedata(Cannabinoids)">Cannabinoids</button>
+<div id="barchart1">
+  Chart 1
+</div>
+<script>
+  function changedata() {
+    var x = document.getElementById("chart1");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
 <button onclick="changedata(StrainMix)">Strain Mix</button> -->
 
 
