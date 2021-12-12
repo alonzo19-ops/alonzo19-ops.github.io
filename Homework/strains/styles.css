@@ -112,7 +112,7 @@ body {
 }
 
 #Indica {
-  background-color: peachpuff;
+  background-color: aliceblue;
   height:fit-content;
   width:fit-content;
   color:black;
@@ -250,7 +250,4 @@ height:100%;
 
 .row .column {
   flex: 1;
-}
-
-
 }
