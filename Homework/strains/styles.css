@@ -332,7 +332,7 @@ text {
 
 /* The slider */
 .slider {
-  position: relative;
+  position: r;
   cursor: pointer;
   top: 0;
   left: 0;
