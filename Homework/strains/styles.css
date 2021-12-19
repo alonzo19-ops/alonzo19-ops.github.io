@@ -1,25 +1,4 @@
-body {
-  margin: 0;
-}
 
-.container {
-  margin-top: 20px;
-}
-
-.panel {
-  background-color: #D9D1C7;
-}
-
-.axis path {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: steelblue;
-
-}
 
 
 #banner {
@@ -30,8 +9,8 @@ body {
   font-size:x-large;
   font-weight:bolder;
   font-stretch: wider;
-  padding-top: 40px;
-  padding-bottom:2px;
+  padding-top: 80px;
+  padding-bottom:1px;
   text-align: center;
   text-align:bottom;
 }
@@ -73,17 +52,6 @@ margin: 60;
 
 }
 
-#chart2 {
-  height: 500;
-  width: 500;
-  border-color: peachpuff;
-  border-width: 2;
-  margin: 60;
-  padding-left: 25;
-    padding-right: 25;
-    padding-top: 25;
-    padding-bottom: 25;
-  }
 
 .section {
   align-items: center;
