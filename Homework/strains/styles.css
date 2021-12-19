@@ -6,9 +6,10 @@
   background-image: url(https://th.bing.com/th/id/OIP.2wFmiEDkw75OicYAYLi6IgHaFP?w=291&h=206&c=7&r=0&o=5&dpr=2.2&pid=1.7);
   background-position: 20% 20%;
   background-size: cover;
-  font-family: "Comic Sans MS";
+  font-family: "cursive";
   font-size:x-large;
   font-weight:bolder;
+  color:palevioletred;
   font-stretch: wider;
   padding-top: 1px;
   padding-bottom:1px;
@@ -408,3 +409,9 @@ input:checked + .slider:before {
 .closebtn:hover {
   color: black;
 }
+
+p2 {color:palevioletred;
+  font-size:25px;
+  text-align:center;
+  font-family:cursive;
+  font-weight:bolder;}
