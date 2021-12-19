@@ -1,15 +1,61 @@
-<!DOCTYPE html>
 <html>
   <head>
+    <style>
+      .switch{
+        position:relative;
+        display:inline-block;
+        width: 60px;
+        height:34px;
+      }
+      .switch input{display:none;}
+
+      .slider{ 
+              position:absolute;
+              cursor:pointer;
+              top:0;
+              left:0;
+              right:0;
+              bottom:0;
+              background-color: peachpuff;
+              -webkit-transition: .4s;
+              transition:.4s;
+
+      }
+
+      .slider:before{
+              position:absolute;
+              content:"";
+              height:26px;
+              width:26px;
+              left:4px;
+              bottom:4px;
+              background-color:white;
+              -webkit-transition:.4s;
+              transition:4s;
+ }
+
+        input:checked+.slider{
+                    background-color: palevioletred;
+        }
+        input:checked+.slider:before{
+                    -webkit-transform:translatex(26px) ;
+                    -ms-transfrom:translatex(26px);
+                    transfrom:translatex(26px);
+        }
+        .slider.round{
+                border-radius:34;
+        }
+        .slider.round:before{
+                border-radius:50%;
+        }
+    </style>
     <meta charset="utf-8" />
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="barchart1.js"></script>
-    <script src="barchart2.js"></script>
-    
-  
+    <script src="chart1.js"></script>
+   
 
   
-          <title>Basement Cannabis Strains</title>
+          <title>Basement Cannabis Sctrains</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -19,28 +65,33 @@
        <br><br><br><br><br><br><br><br><br><br>
 
       
+        <p>
+       What is the differences between cannabis strains? <br> What 
+       are the differences in potency levels regarding CBD and THC? 
+       
+      </p>
+
     </div>
-    <div>
-       
-      
-        <h2>Basement Cannabis: What are the different strains in CeCe's Basement?</h2>
 
-       
-      <p>
-        Introductory informaton about the different strains and effects of cannabis.
-    
-        Cannabinoids: Cannabinoids in cannabis are what create all of the side effects on a consumer.
-        The two most common cannabinoids are CBD & THC.
-        CBD is non-psychoactive and ofen used for medicinal purposes.
-        THC is a psychoactive and is used more for recreational purposes.
+    <style>
+    .rightalign {
+      text-align:center;
+    }
+    </style>
 
-        CBD-to THC Ratios: impact the side effects of cannabis.</p>
-    <p> There are 3 different kinds of cannabis. These different strains are are Sativa, Indica, and (lesser known) Rudalis.
-      Most strains today are a mix of Sativa and Indica. There are rarely any pure strains of Sativa, Indica, or Rudalis. Rudalis
-      is a strain that has some cold weather resistant growing properties but doesn't have a high CBD or THC content.
-      The effects of the strain of cannabis is based on on it's hybrid make up. 
 
-    </div>  `
+
+  <label><input type="radio" name="mode" value="grouped"> Grouped</label>
+  <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
+
+        <div id="chart1">
+        <svg width="500" height="500"></svg>
+        </div>
+
+        
+</body>
+
+
 
 
 <br><br><br>
@@ -109,209 +160,151 @@
       Value: <span id="value"></span>
     </div>
 
+    
     <script src="banner.js"></script>
-    <script type="text/javascript" src="barchart1.js"></script>
-    <script type="text/javascript" src="barchart2.js"></script>
-    
-    
-    <script>
-    // create the svg
-    var svg1 = d3.select("#barchart1"),
-        margin = {top: 20, right: 20, bottom: 30, left: 40},
-        width = +svg1.attr("width") - margin.left - margin.right,
-        height = +svg1.attr("height") - margin.top - margin.bottom,
-        g = svg1.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
-    // set x scale
-    var x = d3.scaleBand()
-        .rangeRound([0, width])
-        .paddingInner(0.05)
-        .align(0.1);
-
-    
-    // set y scale
-    var y = d3.scaleLinear()
-        .domain([0, 100])
-        .rangeRound([height, 0]);
-
-       
-    
-    // set the colors
-    var z = d3.scaleOrdinal()
-        .range(["#FFDAB9", "#F0F8FF","#D1EEE1","#BED0F4","#D7B7BC"]);
-    
-    // load the csv and create the chart
-    d3.csv("data.csv", function(d, i, columns) {
-      for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-      d.total = t;
-      return d;
-    }, function(error, data) {
-      if (error) throw error;
-    
-      var keys = data.columns.slice(1);
-
-    
-      data.sort(function(a, b) { return b.total - a.total; });
-      x.domain(data.map(function(d) { return d.Strain; }));
-      y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-      z.domain(keys);
     
 
-      g.append("g")
-        .selectAll("g")
-        .data(d3.stack().keys(keys)(data))
-        .enter().append("g")
-          .attr("fill", function(d) { return z(d.key); })
-        .selectAll("rect")
-        .data(function(d) { return d; })
-        .enter().append("rect")
-          .attr("x", function(d) { return x(d.data.Strain); })
-          .attr("y", function(d) { return y(d[1]); })
-          .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-          .attr("width", x.bandwidth())
-        .on("mouseover", function() { tooltip.style("display", null); })
-        .on("mouseout", function() { tooltip.style("display", "none"); })
-        .on("mousemove", function(d) {
-          console.log(d);
-          var xPosition = d3.mouse(this)[0] - 5;
-          var yPosition = d3.mouse(this)[1] - 5;
-          tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-          tooltip.select("text").text(d[1]-d[0]);
-        });
-    
-      g.append("g")
-          .attr("class", "axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(x));
 
-      const yAxis = d3.axisLeft(y)
-        .ticks(null, "s")
-        .tickFormat(function(d) {
-          return d + "%";
-        });
-    
-      g.append("g")
-          .attr("class", "axis")
-          .call(yAxis)
-      
-    
-      var legend = g.append("g")
-          .attr("font-family", "sans-serif")
-          .attr("font-size", 10)
-          .attr("text-anchor", "end")
-        .selectAll("g")
-        .data(keys.slice().reverse())
-        .enter().append("g")
-          .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-    
-      legend.append("rect")
-          .attr("x", width - 19)
-          .attr("width", 19)
-          .attr("height", 19)
-          .attr("fill", z);
-    
-      legend.append("text")
-          .attr("x", width - 24)
-          .attr("y", 9.5)
-          .attr("dy", "0.32em")
-          .text(function(d) { return d; });
-    
-           d3.csv("data.csv", function(d, i, columns) {
-      for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-      d.total = t;
-      return d;
-    }, function(error, data) {
-      if (error) throw error;
-    
-      var keys = data.columns.slice(1);
+<!-- Create a div where the circle will take place -->
 
-    
-      data.sort(function(a, b) { return b.total - a.total; });
-      x.domain(data.map(function(d) { return d.Strain; }));
-      y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-      z.domain(keys);
-    
-
-      g.append("g")
-        .selectAll("g")
-        .data(d3.stack().keys(keys)(data))
-        .enter().append("g")
-          .attr("fill", function(d) { return z(d.key); })
-        .selectAll("rect")
-        .data(function(d) { return d; })
-        .enter().append("rect")
-          .attr("x", function(d) { return x(d.data.Strain); })
-          .attr("y", function(d) { return y(d[1]); })
-          .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-          .attr("width", x.bandwidth())
-        .on("mouseover", function() { tooltip.style("display", null); })
-        .on("mouseout", function() { tooltip.style("display", "none"); })
-        .on("mousemove", function(d) {
-          console.log(d);
-          var xPosition = d3.mouse(this)[0] - 5;
-          var yPosition = d3.mouse(this)[1] - 5;
-          tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-          tooltip.select("text").text(d[1]-d[0]);
-        });
-    
-      g.append("g")
-          .attr("class", "axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(x));
-
-      const yAxis = d3.axisLeft(y)
-        .ticks(null, "s")
-        .tickFormat(function(d) {
-          return d + "%";
-        });
-    
-      g.append("g")
-          .attr("class", "axis")
-          .call(yAxis)
-      
-    
-      var legend = g.append("g")
-          .attr("font-family", "sans-serif")
-          .attr("font-size", 10)
-          .attr("text-anchor", "end")
-        .selectAll("g")
-        .data(keys.slice().reverse())
-        .enter().append("g")
-          .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-    
-      legend.append("rect")
-          .attr("x", width - 19)
-          .attr("width", 19)
-          .attr("height", 19)
-          .attr("fill", z);
-    
-      legend.append("text")
-          .attr("x", width - 24)
-          .attr("y", 9.5)
-          .attr("dy", "0.32em")
-          .text(function(d) { return d; });
-    });
-    
-      // Prep the tooltip bits, initial display is hidden
-      var tooltip = svg1.append("g")
-        .attr("class", "tooltip")
-        .style("display", "none");
-          
-      tooltip.append("rect")
-        .attr("width", 60)
-        .attr("height", 20)
-        .attr("fill", "white")
-        .style("opacity", 0.5);
-    
-      tooltip.append("text")
-        .attr("x", 30)
-        .attr("dy", "1.2em")
-        .style("text-anchor", "middle")
-        .attr("font-size", "12px")
-        .attr("font-weight", "bold");
-    
-        
   
-    </script>
-  </body>
-  </html>
+    
+
+<script>
+  // create the svg
+  
+  var svg = d3.select("svg"),
+      margin = {top: 20, right: 20, bottom: 30, left: 40},
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = +svg.attr("height") - margin.top - margin.bottom,
+      g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+
+      var xcolumn = "Strain";
+      var yColumn = "percentage"
+
+  // set x scale
+  var x = d3.scaleBand()
+      .rangeRound([0, width])
+      .paddingInner(0.05)
+      .align(0.1);
+
+  
+  // set y scale
+  var y = d3.scaleLinear()
+      .domain([0, 100])
+      .rangeRound([height, 0]);
+
+  
+  // set the colors
+  var z = d3.scaleOrdinal()
+      .range(["#db7093", "#ffe4e1","#f0fff0", "#f0f8ff",]);
+  
+  // load the csv and create the chart
+  d3.csv("data.csv", function(d, i, columns) {
+    for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+    d.total = t;
+    return d;
+  }, function(error, data) {
+    if (error) throw error;
+
+
+  
+    var keys = data.columns.slice(1);
+
+  
+    data.sort(function(a, b) { return b.total - a.total; });
+    x.domain(data.map(function(d) { return d.Strain; }));
+    y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+    z.domain(keys);
+  
+
+    g.append("g")
+      .selectAll("g")
+      .data(d3.stack().keys(keys)(data))
+      .enter().append("g")
+        .attr("fill", function(d) { return z(d.key); })
+      .selectAll("rect")
+      .data(function(d) { return d; })
+      .enter().append("rect")
+        .attr("x", function(d) { return x(d.data.Strain); })
+        .attr("y", function(d) { return y(d[1]); })
+        .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+        .attr("width", x.bandwidth())
+      .on("mouseover", function() { tooltip.style("display", null); })
+      .on("mouseout", function() { tooltip.style("display", "none"); })
+      .on("mousemove", function(d) {
+        console.log(d);
+        var xPosition = d3.mouse(this)[0] - 5;
+        var yPosition = d3.mouse(this)[1] - 5;
+        tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+        tooltip.select("text").text(d[1]-d[0]);
+      });
+  
+    g.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+  
+    const yAxis = d3.axisLeft(y)
+      .ticks(null, "s")
+      .tickFormat(function(d) {
+        return d + "%";
+      });
+  
+    g.append("g")
+        .attr("class", "axis")
+        .call(yAxis)
+    
+  
+    var legend = g.append("g")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 10)
+        .attr("text-anchor", "end")
+      .selectAll("g")
+      .data(keys.slice().reverse())
+      .enter().append("g")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+    
+    
+    
+  
+    legend.append("rect")
+        .attr("x", width - 19)
+        .attr("width", 19)
+        .attr("height", 19)
+        .attr("fill", z);
+  
+    legend.append("text")
+        .attr("x", width - 24)
+        .attr("y", 9.5)
+        .attr("dy", "0.32em")
+        .text(function(d) { return d; });
+  });
+  
+    // Prep the tooltip bits, initial display is hidden
+    var tooltip = svg.append("g")
+      .attr("class", "tooltip")
+      .style("display", "none");
+        
+    tooltip.append("rect")
+      .attr("width", 60)
+      .attr("height", 20)
+      .attr("fill", "white")
+      .style("opacity", 0.5);
+  
+    tooltip.append("text")
+      .attr("x", 30)
+      .attr("dy", "1.2em")
+      .style("text-anchor", "middle")
+      .attr("font-size", "12px")
+      .attr("font-weight", "bold");
+  
+      
+
+  </script>  
+
+
+
+
+</html>
