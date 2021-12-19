@@ -45,7 +45,7 @@ p {
 
 #chart1 {
 height: 500;
-width: 500;
+width: 700;
 border-color: peachpuff;
 border-width: 2;
 margin: 60;
@@ -111,8 +111,8 @@ body {
 
 #Indica {
   background-color: aliceblue;
-  height:fit-content;
-  width:fit-content;
+  height:350px;
+  width:350px;
   color:black;
   font-style:oblique;
   border-color:palevioletred;
@@ -122,28 +122,31 @@ body {
   padding-right: 15px;
   padding-top: 15px;
   padding: 20vh 20px;
+  line-height:normal;
 }
 #Sativa {
   background-color: Mistyrose;
-  height:fit-content;
-  width:fit-content;
+  height: 350px;;
+  width:350px;
   color: black;
   font-style: oblique;
   border-color: palevioletred;
   border-style: double;
   border-width: 10px;
   padding: 20vh 20px;
+  line-height: normal;
 }
 #Hybrids {
   background-color: honeydew;
-  height:fit-content;
-  width:fit-content;
+  height:350px;
+  width:350px;
   font-style:oblique;
   color:black;
   border-color:palevioletred;
   border-style: double;
   border-width: 10px;
   padding: 20vh 20px;
+  line-height: normal;
 }
 
 #BlueberryCBD {
@@ -292,7 +295,7 @@ height:100%;
 #chartdiv, #legenddiv {
   width: 100;
   height: 200px;
-  border: 1px dotted #c99;
+  border: 1px dotted peachpuff;
   margin: 1em 0;
 }
 
@@ -300,14 +303,14 @@ height:100%;
   height: 150px;
 }
 path {
-	fill: orange;
+	fill: peachpuff;
 	stroke: white;
 }
 text {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 12px;
   font-weight: bold;
-  fill: white;
+  fill: palevioletred;
   text-anchor: middle;
 }
 
