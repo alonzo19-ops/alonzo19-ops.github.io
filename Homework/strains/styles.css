@@ -18,7 +18,7 @@
 
 h1 {
   color: black;
-  text-align:bottom;
+  text-align:center;
   padding-left: 25;
   padding-right: 25;
   padding-top: 25;
@@ -28,7 +28,7 @@ h1 {
 
 h2 {
   color: black;
-  text-align:bottom;
+  text-align:center;
   padding-left: 25;
   padding-right: 25;
   padding-top: 25;
@@ -161,34 +161,40 @@ body {
   border-color:palevioletred;
   border-style: double;
   border-width: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding: 20vh 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding: 5vh 5px;
+  line-height:normal;
 }
+
 #BruceBanner {
   background-color: darkolivegreen;
   height:auto;
   width:auto;
   color: black;
-  font-style: oblique;
-  border-color: palevioletred;
+  border-color:palevioletred;
   border-style: double;
   border-width: 10px;
-  padding: 20vh 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding: 5vh 5px;
+  line-height:normal;
 }
 #GoldLeaf {
   background-color: palegoldenrod;
   height:auto;
   width:auto;
-  font-style:oblique;
-  color:black;
   border-color:palevioletred;
   border-style: double;
   border-width: 10px;
-  padding: 20vh 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding: 5vh 5px;
+  line-height:normal;
 }
-
 .footer {
   position:fixed;
   bottom:0;
