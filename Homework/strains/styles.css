@@ -1,8 +1,6 @@
 
-#chart1 {
-  s
-}
-}
+
+
 
 #banner {
   background-image: url(https://th.bing.com/th/id/OIP.2wFmiEDkw75OicYAYLi6IgHaFP?w=291&h=206&c=7&r=0&o=5&dpr=2.2&pid=1.7);
@@ -334,7 +332,7 @@ text {
 
 /* The slider */
 .slider {
-  position: absolute;
+  position: relative;
   cursor: pointer;
   top: 0;
   left: 0;
@@ -355,6 +353,7 @@ text {
   background-color: lavenderblush;
   -webkit-transition: .4s;
   transition: .4s;
+  
 }
 
 input:checked + .slider {
