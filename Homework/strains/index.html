@@ -1,54 +1,7 @@
 <html>
   <head>
-    <style>
-      .switch{
-        position:relative;
-        display:inline-block;
-        width: 60px;
-        height:34px;
-      }
-      .switch input{display:none;}
-
-      .slider{ 
-              position:absolute;
-              cursor:pointer;
-              top:0;
-              left:0;
-              right:0;
-              bottom:0;
-              background-color: peachpuff;
-              -webkit-transition: .4s;
-              transition:.4s;
-
-      }
-
-      .slider:before{
-              position:absolute;
-              content:"";
-              height:26px;
-              width:26px;
-              left:4px;
-              bottom:4px;
-              background-color:white;
-              -webkit-transition:.4s;
-              transition:4s;
- }
-
-        input:checked+.slider{
-                    background-color: palevioletred;
-        }
-        input:checked+.slider:before{
-                    -webkit-transform:translatex(26px) ;
-                    -ms-transfrom:translatex(26px);
-                    transfrom:translatex(26px);
-        }
-        .slider.round{
-                border-radius:34;
-        }
-        .slider.round:before{
-                border-radius:50%;
-        }
-    </style>
+   
+    
     <meta charset="utf-8" />
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="chart1.js"></script>
@@ -66,6 +19,8 @@
        <br><br><br><br><br><br><br><br><br><br>
        <br><br><br><br><br><br><br><br><br><br>
 
+        <br><br><br><br><br><br><br><br><br><br>       
+
       
         <p>
        What is the differences between cannabis strains? <br> What 
@@ -81,13 +36,23 @@
     }
     </style>
 
+<!-- Rectangular switch -->
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
 
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
 
   <label><input type="radio" name="mode" value="grouped"> Grouped</label>
   <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
 
         <div id="chart1">
-        <svg width="500" height="500"></svg>
+        <svg width="1000" height="500"></svg>
         </div>
 
         
@@ -258,25 +223,25 @@
   
     var legend = g.append("g")
         .attr("font-family", "sans-serif")
-        .attr("font-size", 10)
+        .attr("font-size", 200)
         .attr("text-anchor", "end")
       .selectAll("g")
       .data(keys.slice().reverse())
       .enter().append("g")
-        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+        .attr("transform", function(d, i) { return "translate(0," + i * 80 + ")"; });
     
     
     
   
     legend.append("rect")
-        .attr("x", width - 19)
-        .attr("width", 19)
-        .attr("height", 19)
+        .attr("x", width - 100)
+        .attr("width", 40)
+        .attr("height", 40)
         .attr("fill", z);
   
     legend.append("text")
-        .attr("x", width - 24)
-        .attr("y", 9.5)
+        .attr("x", width - 25)
+        .attr("y", 25)
         .attr("dy", "0.32em")
         .text(function(d) { return d; });
   });
@@ -302,8 +267,10 @@
       
 
   </script>  
+  
+  Radio
 
-<div class="row">
+<div class="row2">
   <div id="Bruce Banner" class="column">
     Bruce Banner
     <p>
@@ -332,10 +299,7 @@
       to find a pure indica or pure sativa strain. Most strains are in fact
       hybrids. The effects of hybrid strains are dependent on the hybrid weed 
       strain and the effects the "parent" strains are known to produce.
-      *Special Mention*
-      Cannabis Rudalis is not a highly psychotropic strain. It is used primarily as 
-      source of breeding with other strains to create hybrids. These 
-      hybrids flower earlier and can be adjusted to grow in northern climates.
+      *Special M
     </p>
   </div>
 </div>

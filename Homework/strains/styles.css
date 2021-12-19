@@ -3,13 +3,13 @@
 
 #banner {
   background-image: url(https://th.bing.com/th/id/OIP.2wFmiEDkw75OicYAYLi6IgHaFP?w=291&h=206&c=7&r=0&o=5&dpr=2.2&pid=1.7);
-  background-position: 50% 100%;
+  background-position: 20% 20%;
   background-size: cover;
   font-family: "Comic Sans MS";
   font-size:x-large;
   font-weight:bolder;
   font-stretch: wider;
-  padding-top: 80px;
+  padding-top: 1px;
   padding-bottom:1px;
   text-align: center;
   text-align:bottom;
@@ -45,7 +45,7 @@ p {
 
 #chart1 {
 height: 500;
-width: 700;
+width: 1000;
 border-color: peachpuff;
 border-width: 2;
 margin: 60;
@@ -111,48 +111,55 @@ body {
 
 #Indica {
   background-color: aliceblue;
-  height:350px;
-  width:350px;
-  color:black;
+  height:auto;
+  width:auto;
+  color:aliceblue;
   font-style:oblique;
   border-color:palevioletred;
   border-style: double;
   border-width: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding: 20vh 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding: 5vh 5px;
   line-height:normal;
 }
 #Sativa {
-  background-color: Mistyrose;
-  height: 350px;;
-  width:350px;
-  color: black;
-  font-style: oblique;
-  border-color: palevioletred;
-  border-style: double;
-  border-width: 10px;
-  padding: 20vh 20px;
-  line-height: normal;
-}
-#Hybrids {
   background-color: honeydew;
-  height:350px;
-  width:350px;
+  height: auto;;
+  width:auto;
+  color: black;
   font-style:oblique;
-  color:black;
   border-color:palevioletred;
   border-style: double;
   border-width: 10px;
-  padding: 20vh 20px;
-  line-height: normal;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding: 5vh 5px;
+  line-height:normal;
+}
+#Hybrids {
+  background-color: mistyrose;
+  height:auto;
+  width:auto;
+  font-style:oblique;
+  color:black;
+  font-style:oblique;
+  border-color:palevioletred;
+  border-style: double;
+  border-width: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding: 5vh 5px;
+  line-height:normal;
 }
 
 #BlueberryCBD {
-  background-color: aliceblue;
-  height:fit-content;
-  width:fit-content;
+  background-color: lavender;
+  height:auto;
+  width:auto;
   color:black;
   font-style:oblique;
   border-color:palevioletred;
@@ -164,9 +171,9 @@ body {
   padding: 20vh 20px;
 }
 #BruceBanner {
-  background-color: Mistyrose;
-  height:fit-content;
-  width:fit-content;
+  background-color: darkolivegreen;
+  height:auto;
+  width:auto;
   color: black;
   font-style: oblique;
   border-color: palevioletred;
@@ -175,9 +182,9 @@ body {
   padding: 20vh 20px;
 }
 #GoldLeaf {
-  background-color: honeydew;
-  height:fit-content;
-  width:fit-content;
+  background-color: palegoldenrod;
+  height:auto;
+  width:auto;
   font-style:oblique;
   color:black;
   border-color:palevioletred;
@@ -313,4 +320,63 @@ text {
   fill: palevioletred;
   text-anchor: middle;
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: .4;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: lavenderblush;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: palevioletred;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px peachpuff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
