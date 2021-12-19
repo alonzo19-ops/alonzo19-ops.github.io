@@ -1,5 +1,8 @@
 
-
+#chart1 {
+  s
+}
+}
 
 #banner {
   background-image: url(https://th.bing.com/th/id/OIP.2wFmiEDkw75OicYAYLi6IgHaFP?w=291&h=206&c=7&r=0&o=5&dpr=2.2&pid=1.7);
@@ -49,6 +52,9 @@ width: 1000;
 border-color: peachpuff;
 border-width: 2;
 margin: 60;
+border: lightpink;
+align-items: center;
+align-content: center;
 
 }
 
@@ -100,20 +106,12 @@ body {
 }
 
 
-.call-out{
-  padding: 20px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  flex-basis: 30%;
-  flex-direction: row;
-  border-width: 10px
-}
 
 #Indica {
   background-color: aliceblue;
   height:auto;
   width:auto;
-  color:aliceblue;
+  color:black;
   font-style:oblique;
   border-color:palevioletred;
   border-style: double;
@@ -342,7 +340,7 @@ text {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: lavenderblush;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -380,3 +378,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
